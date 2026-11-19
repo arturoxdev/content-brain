@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "yt3.ggpht.com" },
+      { protocol: "https", hostname: "yt3.googleusercontent.com" },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
